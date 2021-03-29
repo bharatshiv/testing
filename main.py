@@ -12,7 +12,8 @@ app.config['MYSQL_DATABASE_DB']='mydata'
 mysql=MySQL()
 mysql.init_app(app)
 
-@app.route('/home',methods=['GET','POST'])
+@app.route('/')
+@app.route('/index')
 def home():
     return render_template('login.html')
 
